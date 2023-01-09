@@ -162,6 +162,5 @@ if app_mode == 'Home':
 
 elif app_mode == 'Demo':
     st.header('Real-Time Hand Gesture Recognition')
-    argue = Image.open()
     oc = OpenCamera()
     oc.recv()
