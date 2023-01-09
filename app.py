@@ -162,5 +162,8 @@ if app_mode == 'Home':
 
 elif app_mode == 'Demo':
     st.header('Real-Time Hand Gesture Recognition')
-    oc = OpenCamera()
-    oc.recv()
+    start = st.button('start')
+    if start:
+        oc = OpenCamera()
+        oc.recv()
+        
