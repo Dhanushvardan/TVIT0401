@@ -140,11 +140,28 @@ class OpenCamera ():
         
        
                     
-                    
-                    
-                    
-                   
-            
+st.sidebar.title('Quadsquad')
+app_mode = st.sidebar.selectbox('Select Page', ['Home', 'Demo'])
 
-oc = OpenCamera()
-oc.recv()
+if app_mode == 'Home':
+    st.title('சைகை துணை')
+    st.write('செவித்திறன் குறைபாடுள்ளவர்கள் ஒவ்வொரு அறிகுறிகளையும் சரியாகப் புரிந்துகொள்ள எங்கள் திட்டம் மிகவும் பயனுள்ளதாக இருக்கும். அத்தகைய அமைப்பு பயன்படுத்தப்படாவிட்டால், சைகை மொழியைப் புரிந்துகொள்வதில் அவர்களுக்கு இரண்டு சிரமங்கள் இருக்கலாம். முதலாவதாக, சிக்கலான அறிகுறிகளை அவர்கள் அறிந்திருக்க மாட்டார்கள் மற்றும் அடையாளம் காண முடியாது. இரண்டாவதாக, அவர்கள் சரியான அங்கீகாரத்திற்குப் பதிலாக எந்த அறிகுறிகளையும் தவறாகப் புரிந்து கொள்ளலாம். இந்த வகையான பிரச்சனைகளுக்கு எங்கள் திட்டம் எளிய மற்றும் திறமையான தீர்வாக செயல்படுகிறது')
+    good = Image.open(r'.\good.png')
+    hello = Image.open(r'\hello.png')
+    i_love_you = Image.open(r'\i_love_you.png')
+    argue = Image.open(r'\argue.png')
+    please = Image.open(r'\please.png')
+    see =Image.open(r'\see.png')
+    stop = Image.open(r'\stop.png')
+    thanks = Image.open(r'\thanks.png')
+    yes = Image.open(r'\yes.png')
+    walk = Image.open(r'\walk.png')
+    lst_img = [good, hello, i_love_you, argue, please, see, stop, thanks, yes, walk]
+    for i in lst_img:
+        st.image(i)
+
+elif app_mode == 'Demo':
+    st.header('Real-Time Hand Gesture Recognition')
+    argue = Image.open()
+    oc = OpenCamera()
+    oc.recv()
